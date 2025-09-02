@@ -1,0 +1,232 @@
+{
+  "mainAgent": {
+    "name": "MainAgent",
+    "version": "1.0.0",
+    "description": "Primary agent responsible for orchestrating subagents and managing overall system flow",
+    "capabilities": [
+      "task_orchestration",
+      "subagent_management",
+      "error_handling",
+      "logging"
+    ],
+    "config": {
+      "maxConcurrentTasks": 10,
+      "timeout": 30000,
+      "retryAttempts": 3
+    }
+  },
+  "subagents": {
+    "dataProcessing": {
+      "name": "DataProcessingAgent",
+      "version": "1.0.0",
+      "description": "Handles data transformation, validation, and processing tasks",
+      "capabilities": [
+        "data_validation",
+        "data_transformation",
+        "batch_processing",
+        "data_cleaning"
+      ],
+      "config": {
+        "batchSize": 1000,
+        "timeout": 60000,
+        "maxMemoryUsage": "512MB"
+      }
+    },
+    "userInteraction": {
+      "name": "UserInteractionAgent",
+      "version": "1.0.0",
+      "description": "Manages user interface interactions and user experience",
+      "capabilities": [
+        "ui_management",
+        "user_input_processing",
+        "response_generation",
+        "session_management"
+      ],
+      "config": {
+        "sessionTimeout": 1800000,
+        "maxInputLength": 10000,
+        "responseTimeout": 15000
+      }
+    },
+    "analytics": {
+      "name": "AnalyticsAgent",
+      "version": "1.0.0",
+      "description": "Handles data analytics, reporting, and insights generation",
+      "capabilities": [
+        "data_analysis",
+        "report_generation",
+        "trend_analysis",
+        "performance_monitoring"
+      ],
+      "config": {
+        "analysisTimeout": 120000,
+        "maxDataPoints": 100000,
+        "reportFormat": "json"
+      }
+    },
+    "integration": {
+      "name": "IntegrationAgent",
+      "version": "1.0.0",
+      "description": "Manages external API integrations and third-party services",
+      "capabilities": [
+        "api_integration",
+        "webhook_management",
+        "data_synchronization",
+        "service_discovery"
+      ],
+      "config": {
+        "apiTimeout": 30000,
+        "maxRetries": 5,
+        "rateLimit": 100
+      }
+    },
+    "leadQualification": {
+      "name": "LeadQualificationAgent",
+      "version": "1.0.0",
+      "description": "Automatically qualifies leads based on business criteria and routes them appropriately",
+      "capabilities": [
+        "lead_qualification",
+        "lead_scoring",
+        "lead_routing",
+        "source_analysis",
+        "status_management"
+      ],
+      "config": {
+        "scoringWeights": {
+          "companySize": 20,
+          "budget": 25,
+          "timeline": 15,
+          "industry": 10,
+          "painPoints": 30
+        },
+        "qualificationThresholds": {
+          "hot": 80,
+          "warm": 60,
+          "lukewarm": 40,
+          "cold": 0
+        },
+        "timeout": 30000
+      }
+    },
+    "contentManagement": {
+      "name": "ContentManagementAgent",
+      "version": "1.0.0",
+      "description": "Manages Sanity CMS content, blog posts, and marketing materials",
+      "capabilities": [
+        "content_creation",
+        "content_validation",
+        "content_publishing",
+        "seo_optimization",
+        "content_scheduling",
+        "content_analysis"
+      ],
+      "config": {
+        "contentTypes": ["blog_post", "case_study", "resource", "faq"],
+        "publishingWorkflow": ["draft", "review", "published", "archived"],
+        "seoRules": {
+          "titleLength": { "min": 30, "max": 60 },
+          "descriptionLength": { "min": 120, "max": 160 }
+        },
+        "timeout": 45000
+      }
+    },
+    "analyticsReporting": {
+      "name": "AnalyticsReportingAgent",
+      "version": "1.0.0",
+      "description": "Analyzes marketing performance and generates insights for business growth",
+      "capabilities": [
+        "report_generation",
+        "performance_analysis",
+        "kpi_tracking",
+        "trend_identification",
+        "insight_generation",
+        "forecasting",
+        "period_comparison"
+      ],
+      "config": {
+        "metrics": ["lead_generation", "consultation_bookings", "conversion_rate", "client_acquisition", "revenue_growth"],
+        "reportTemplates": ["weekly_summary", "monthly_performance", "quarterly_review", "lead_source_analysis"],
+        "kpiThresholds": {
+          "warning": 0.6,
+          "critical": 0.4,
+          "excellent": 1.2
+        },
+        "timeout": 60000
+      }
+    },
+    "creativeDirector": {
+      "name": "CreativeDirectorAgent",
+      "version": "1.0.0",
+      "description": "Manages creative workflows, brand guidelines, and creative briefs using hybrid JavaScript + markdown approach",
+      "capabilities": [
+        "creative_brief_creation",
+        "design_review",
+        "concept_generation",
+        "feedback_management",
+        "deliverable_approval",
+        "brand_guidelines_generation",
+        "project_progress_tracking",
+        "timeline_creation"
+      ],
+      "config": {
+        "workflows": ["website_design", "brand_identity", "marketing_campaign"],
+        "templates": ["creative_brief", "brand_guidelines", "feedback_template", "project_timeline"],
+        "brandGuidelines": {
+          "colorPalette": ["#00a6e3", "#002848", "#ec008b", "#abd6f2"],
+          "typography": "Inter, sans-serif",
+          "toneOfVoice": "Professional but approachable"
+        },
+        "timeout": 45000
+      }
+    },
+    "whimsicalDesigner": {
+      "name": "WhimsicalDesignerAgent",
+      "version": "1.0.0",
+      "description": "Approaches design projects with creativity, fun, and unconventional thinking while maintaining professional standards",
+      "capabilities": [
+        "whimsical_concept_generation",
+        "playful_interface_design",
+        "micro_interaction_creation",
+        "quirky_component_design",
+        "playful_copy_generation",
+        "hidden_delight_creation",
+        "conversational_flow_design",
+        "whimsical_illustration_generation"
+      ],
+      "config": {
+        "whimsicalElements": ["micro_interactions", "illustrations", "typography_play", "color_surprises", "hidden_delights"],
+        "designMoods": ["playful_professional", "creative_explorer", "friendly_guide", "magical_moments"],
+        "creativeInspirations": ["nature", "retro_futuristic", "handmade", "playful_tech", "storybook"],
+        "quirkyComponents": ["bouncy_button", "floating_card", "typing_animation", "confetti_celebration"],
+        "timeout": 60000
+      }
+    }
+  },
+  "communication": {
+    "protocol": "http",
+    "port": 3001,
+    "host": "localhost",
+    "endpoints": {
+      "mainAgent": "/api/main-agent",
+      "subagents": "/api/subagents",
+      "health": "/api/health"
+    }
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "output": "file",
+    "filePath": "./logs/agents.log"
+  },
+  "security": {
+    "authentication": {
+      "enabled": true,
+      "method": "jwt",
+      "secret": "${JWT_SECRET}"
+    },
+    "authorization": {
+      "enabled": true,
+      "roles": ["admin", "user", "agent"]
+    }
+  }
+}
