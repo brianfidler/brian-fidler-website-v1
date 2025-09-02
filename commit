@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Simple commit script - runs quick-commit from anywhere in the project
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Run the quick-commit script
+"$SCRIPT_DIR/scripts/quick-commit.sh"
